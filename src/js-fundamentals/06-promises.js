@@ -17,11 +17,24 @@
 // };
 
 // Una funcion async no es mas que una funcion que internamente regresa una promesa
+// const getPokemonById = async (id) => {
+//   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+
+//   const response = await fetch(url);
+//   const pokemon = await response.json();
+
+// // throw new Error('Error: Pokemon not found');
+
+//   return pokemon.name;
+// };
+
+const { http } = require('../plugins');
+
 const getPokemonById = async (id) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
-  const response = await fetch(url); 
-  return 10
+  const pokemon = await http.get(url);
+  return pokemon.name;
 };
 
 module.exports = { getPokemonById };

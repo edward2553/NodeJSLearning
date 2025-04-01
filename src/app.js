@@ -22,10 +22,10 @@
 
 // console.log(edward)
 
+// Siempre que hayan dependencias de tercero, adaptarlo con codigo mio
 const { getPokemonById } = require('./js-fundamentals/06-promises');
 
-const info = getPokemonById(6).then(pokemon => console.log(pokemon));
-console.log(info);
+const info = getPokemonById(6).then(pokemon => console.log({pokemon})).catch(err => console.log(err));
 
 // setTimeout(() => {
 //     console.log(info)
