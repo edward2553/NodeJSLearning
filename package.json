@@ -1,0 +1,23 @@
+{
+  "name": "02-fundamentos",
+  "version": "1.0.0",
+  "description": "NodeJS course fundamentals",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "basics"
+  ],
+  "author": "Edd",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "get-age": "^1.0.1",
+    "uuid": "^11.0.5"
+  }
+}
