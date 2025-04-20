@@ -9,7 +9,10 @@ const users = [
   },
 ];
 
-function getUserById(id, callback) {
+export function getUserById(
+  id: number,
+  callback: (message: string | null, data: any) => void
+) {
   const user = users.find(function (user) {
     return user.id === id;
   });
@@ -18,7 +21,3 @@ function getUserById(id, callback) {
 
   return callback(null, user);
 }
-
-module.exports = {
-  getUserById,
-};

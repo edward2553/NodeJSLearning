@@ -1,8 +1,12 @@
 // function that creates another function
 
+interface IBuildMakePerson {
+  getUUID: () => string;
+  getAge: (birthDate: string) => number;
+}
 
-const buildMakePerson = ({ getUUID, getAge }) => {
-  return ({ name, birthDate }) => {
+export const buildMakePerson = ({ getUUID, getAge }: IBuildMakePerson) => {
+  return ({ name, birthDate }: { name: string; birthDate: string }) => {
     return {
       id: getUUID(),
       name,
@@ -10,10 +14,6 @@ const buildMakePerson = ({ getUUID, getAge }) => {
       age: getAge(birthDate),
     };
   };
-};
-
-module.exports = {
-  buildMakePerson,
 };
 
 // const obj = { name: 'Edward Andres Moron Quintana', birthDate: '2000-06-02' };

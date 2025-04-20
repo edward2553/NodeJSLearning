@@ -1,4 +1,5 @@
-const winston = require('winston');
+// const winston = require('winston');
+import winston from 'winston';
 const { combine, timestamp, json } = winston.format;
 
 const logger = winston.createLogger({
@@ -16,7 +17,7 @@ const logger = winston.createLogger({
     // - Write all logs with importance level of `info` or higher to `combined.log`
     //   (i.e., fatal, error, warn, and info, but not trace)
     //
-    new winston.transports.File({ filename: 'combined.log' }), 
+    new winston.transports.File({ filename: 'combined.log' }),
   ],
 });
 
@@ -26,12 +27,12 @@ logger.add(
   })
 );
 
-module.exports = function buildLogger(service) {
+module.exports = function buildLogger(service: string) {
   return {
-    log: (message) => {
+    log: (message: string) => {
       logger.log('info', { message, service });
     },
-    error: (message) => {
+    error: (message: string) => {
       logger.error('error', {
         at: new Date().toISOString(),
         message,

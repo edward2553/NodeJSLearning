@@ -28,9 +28,9 @@
 //   return pokemon.name;
 // };
 
-const { http } = require('../plugins');
+import { httpClientPlugin as http } from '../plugins';
 
-const getPokemonById = async (id) => {
+const getPokemonById = async (id: string) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
   const pokemon = await http.get(url);

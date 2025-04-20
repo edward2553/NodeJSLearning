@@ -13,14 +13,13 @@ const users = [
   },
 ];
 
-const getUserById = (id, callback) => {
+export const getUserById = (
+  id: number,
+  callback: (message: string | null, result: any) => void
+) => {
   const user = users.find((user) => user.id === id);
 
   return user
     ? callback(null, user)
     : callback(`User with ID ${id} not found`, undefined);
-};
-
-module.exports = {
-  getUserById,
 };
