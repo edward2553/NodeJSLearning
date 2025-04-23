@@ -40,5 +40,5 @@
 
 // logger.log('Hello world');
 // logger.error('Esto es algo malo');
-export const name = 'Edward'
-console.log('Hello world');
+// export const name = 'Edward'
+// console.log('Hello world');
