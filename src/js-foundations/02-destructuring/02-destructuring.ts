@@ -6,4 +6,3 @@ export const character = ['Superman', 'Flash', 'Green Lantern', 'Batman'];
 
 const [, , , batman] = character;
 
-console.log(batman);

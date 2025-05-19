@@ -1,11 +1,11 @@
 // function that creates another function
 
-interface IBuildMakePerson {
+interface IPersonFactory {
   getUUID: () => string;
   getAge: (birthDate: string) => number;
 }
 
-export const buildMakePerson = ({ getUUID, getAge }: IBuildMakePerson) => {
+export const personFactory = ({ getUUID, getAge }: IPersonFactory) => {
   return ({ name, birthDate }: { name: string; birthDate: string }) => {
     return {
       id: getUUID(),

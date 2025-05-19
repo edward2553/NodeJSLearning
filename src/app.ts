@@ -1,16 +1,17 @@
 // const { emailTemplate } = require('./js-fundamentals/01-template');
 
+import { getUserById } from "./js-foundations/04-arrow";
+
 // console.log(emailTemplate);
 
 // require('./js-fundamentals/02-destructuring')
-// const { getUserById } = require('./js-fundamentals/04-arrow');
 
-// let id = 3;
+const id = 2;
 
-// getUserById(id, (error, user) => {
-//   if (error) throw new Error(error);
-//   console.log(user);
-// });
+getUserById(id, (error, user) => {
+  if (error) throw new Error(error);
+  console.log(user);
+});
 
 // const { getAge, getUuid: getUUID } = require('./plugins');
 // const { buildMakePerson } = require('./js-fundamentals/05-factory');

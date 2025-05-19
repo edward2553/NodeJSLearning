@@ -8,7 +8,7 @@ describe('js-foundation/02-destructuring.ts', () => {
   });
 
   test('First character should be Flash', () => {
-    const [flash, superman] = character;
+    const [superman, flash] = character;
 
     expect(flash).toBe('Flash');
     expect(superman).toBe('Superman');

@@ -28,13 +28,16 @@
 //   return pokemon.name;
 // };
 
-import { httpClientPlugin as http } from '../plugins';
+import { httpClientPlugin as http } from '../../plugins';
 
-const getPokemonById = async (id: string) => {
-  const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-
-  const pokemon = await http.get(url);
-  return pokemon.name;
+export const getPokemonById = async (id: string | number) => {
+  try {
+    
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+  
+    const pokemon = await http.get(url);
+    return pokemon.name;
+  } catch (error) {
+    throw `Pokemon not found with ID ${id}`;
+  }
 };
-
-module.exports = { getPokemonById };
