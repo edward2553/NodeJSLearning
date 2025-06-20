@@ -28,7 +28,7 @@
 //   return pokemon.name;
 // };
 
-import { httpClientPlugin as http } from '../../plugins';
+import { httpClientPlugin as http } from '../../plugins/http-client/http-client.plugin';
 
 export const getPokemonById = async (id: string | number) => {
   try {

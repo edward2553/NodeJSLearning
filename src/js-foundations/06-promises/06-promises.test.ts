@@ -16,7 +16,6 @@ describe('js-foundations/06-promises', () => {
       expect(true).toBeFalsy();
     } catch (error) {
       expect(error).toBe(`Pokemon not found with ID ${pokemonId}`);
-      console.log(error);
     }
   });
 });
