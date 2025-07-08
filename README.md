@@ -1,8 +1,4 @@
-# 02 - fundamentals of nodeJS
----
+# 02-bases
 
-## Run dev
-    * npm run dev
-
-## start the project
-    * npm start
+In this small project we have basic concepts of ts & js.
+also we include testing
